@@ -34,6 +34,8 @@ public class MainActivity extends BaseActivity {
     int fifthRankCount = 0;
     int nonRankCount = 0;
 
+    boolean isAutoLottoRunning = false;
+
     ActivityMainBinding binding = null;
 
     Handler mHandler = new Handler();
@@ -52,6 +54,15 @@ public class MainActivity extends BaseActivity {
 
     void buyLottoLoop() {
         mHandler.post(buyLottoRunnable);
+        // 계속 돌아가고있다.
+        isAutoLottoRunning = true;
+        binding.buyAutoBtn.setText("자동 구매 중단");
+    }
+
+    void stopBuyingLotto() {
+        mHandler.removeCallbacks(buyLottoRunnable);
+        isAutoLottoRunning = false;
+        binding.buyAutoBtn.setText("자동 구매 재개");
     }
 
     @Override
@@ -74,7 +85,11 @@ public class MainActivity extends BaseActivity {
 //                    makeWinLottoNum();
 //                    checkLottoRank();
 //                }
-                buyLottoLoop();
+                if (!isAutoLottoRunning) {
+                    buyLottoLoop();
+                } else {
+                    stopBuyingLotto();
+                }
             }
         });
 
