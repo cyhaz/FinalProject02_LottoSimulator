@@ -23,6 +23,7 @@ public class MainActivity extends BaseActivity {
     int[] myLottoNumArr = {3,11,17,29,35,38};
 
     long useMoneyAmount = 0;   // 로또구매에 사용한 총금액
+    long winMoneyAmount = 0;   // 총 당첨금액
     ActivityMainBinding binding = null;
 
     @Override
@@ -124,7 +125,7 @@ public class MainActivity extends BaseActivity {
 
     void checkLottoRank() {
         useMoneyAmount += 1000;
-        binding.useMoneyTxt.setText(String.format("사용 금액 : %,d원", useMoneyAmount));
+        binding.useMoneyTxt.setText(String.format("사용금액 : %,d원", useMoneyAmount));
 
 //        내 번호를 하나 들고 => 당첨번호 6개를 계속 돌며 반복 => 몇개의 숫자를 맞췄는가?
         // 맞춘갯수 담아줄 변수
@@ -141,16 +142,22 @@ public class MainActivity extends BaseActivity {
 //        correctCount의 값에 따라 등수를 판정
         if (correctCount == 6) {
             // 1등
+            winMoneyAmount += 1600000000;
 
         } else if (correctCount == 5) {
             // 2등? 3등? 재검사 => 보너스번호 맞췄나?
         } else if (correctCount == 4) {
             // 4등
+            winMoneyAmount += 50000;
         } else if (correctCount == 3) {
             // 5등
+            useMoneyAmount -= 5000;
         } else {
-            // 꽝
+            // 꽝 -> 아무일도...
         }
+
+//        당첨금액 텍스트에도 반영
+        binding.winMoneyTxt.setText(String.format("당첨금액 : %,d원", winMoneyAmount));
     }
 
 }

@@ -174,5 +174,14 @@
             android:textColor="@color/black"
             android:text="사용금액 : 0원"/>
 
+        <TextView
+            android:id="@+id/winMoneyTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text="당첨금액 : 0원"/>
+
     </LinearLayout>
 </layout>
