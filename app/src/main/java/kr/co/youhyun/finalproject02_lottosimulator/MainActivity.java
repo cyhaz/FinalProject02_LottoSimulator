@@ -19,6 +19,7 @@ public class MainActivity extends BaseActivity {
     List<TextView> winNumTxtList = new ArrayList<>();
     int[] winLottoNumArr = new int[6];
     int bonusNum = 0;
+    long useMoneyAmount = 0;   // 로또구매에 사용한 총금액
     ActivityMainBinding binding = null;
 
     @Override
@@ -37,6 +38,9 @@ public class MainActivity extends BaseActivity {
             public void onClick(View v) {
 //                당첨번호 생성 => 텍스트뷰에 반영
                 makeWinLottoNum();
+
+//                몇등인지 판단하는 함수
+                checkLottoRank();
             }
         });
 
@@ -110,9 +114,15 @@ public class MainActivity extends BaseActivity {
             }
         }
 
-//        보너스넘버 생성됨!
+//        보너스번호 생성됨!
         binding.bonusNumTxt.setText(bonusNum+"");
 
+    }
+
+    void checkLottoRank() {
+        useMoneyAmount += 1000;
+
+        binding.useMoneyTxt.setText(String.format("사용 금액 : %,d원", useMoneyAmount));
     }
 
 }

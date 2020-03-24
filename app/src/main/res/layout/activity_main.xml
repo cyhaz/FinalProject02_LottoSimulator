@@ -93,10 +93,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="로또 한 장 구매"
+            android:textSize="16sp"
+            android:textColor="@drawable/text_color_redtowhite"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:background="@drawable/login_btn"/>
+
+        <TextView
+            android:id="@+id/useMoneyTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text="사용금액 : 0원"/>
 
     </LinearLayout>
 </layout>
