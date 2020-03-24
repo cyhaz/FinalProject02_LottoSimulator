@@ -183,5 +183,59 @@
             android:textColor="@color/black"
             android:text="당첨금액 : 0원"/>
 
+        <TextView
+            android:id="@+id/firstRankCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/orange"
+            android:text="1등 : 0회"/>
+
+        <TextView
+            android:id="@+id/secondtRankCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/orange"
+            android:text="1등 : 0회"/>
+
+        <TextView
+            android:id="@+id/thirdRankCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/orange"
+            android:text="1등 : 0회"/>
+
+        <TextView
+            android:id="@+id/forthRankCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/orange"
+            android:text="1등 : 0회"/>
+
+        <TextView
+            android:id="@+id/fifthRankCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/orange"
+            android:text="1등 : 0회"/>
+
+        <TextView
+            android:id="@+id/sixthRankCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/orange"
+            android:text="1등 : 0회"/>
+
     </LinearLayout>
 </layout>
