@@ -199,7 +199,7 @@
             android:layout_marginTop="15dp"
             android:textSize="16sp"
             android:textColor="@color/orange"
-            android:text="1등 : 0회"/>
+            android:text="2등 : 0회"/>
 
         <TextView
             android:id="@+id/thirdRankCountTxt"
@@ -208,16 +208,16 @@
             android:layout_marginTop="15dp"
             android:textSize="16sp"
             android:textColor="@color/orange"
-            android:text="1등 : 0회"/>
+            android:text="3등 : 0회"/>
 
         <TextView
-            android:id="@+id/forthRankCountTxt"
+            android:id="@+id/fourthRankCountTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:textSize="16sp"
             android:textColor="@color/orange"
-            android:text="1등 : 0회"/>
+            android:text="4등 : 0회"/>
 
         <TextView
             android:id="@+id/fifthRankCountTxt"
@@ -226,16 +226,16 @@
             android:layout_marginTop="15dp"
             android:textSize="16sp"
             android:textColor="@color/orange"
-            android:text="1등 : 0회"/>
+            android:text="5등 : 0회"/>
 
         <TextView
-            android:id="@+id/sixthRankCountTxt"
+            android:id="@+id/nonRankCountTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:textSize="16sp"
             android:textColor="@color/orange"
-            android:text="1등 : 0회"/>
+            android:text="꽝 : 0회"/>
 
     </LinearLayout>
 </layout>

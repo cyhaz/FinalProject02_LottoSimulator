@@ -24,6 +24,15 @@ public class MainActivity extends BaseActivity {
 
     long useMoneyAmount = 0;   // 로또구매에 사용한 총금액
     long winMoneyAmount = 0;   // 총 당첨금액
+
+    int firstRankCount = 0;
+    int secondRankCount = 0;
+    int thirdRankCount = 0;
+    int fourthRankCount = 0;
+    int fifthRankCount = 0;
+    int nonRankCount = 0;
+
+
     ActivityMainBinding binding = null;
 
     @Override
@@ -143,6 +152,7 @@ public class MainActivity extends BaseActivity {
         if (correctCount == 6) {
             // 1등
             winMoneyAmount += 1600000000;
+            firstRankCount++;
 
         } else if (correctCount == 5) {
             // 2등? 3등? 재검사 => 보너스번호 맞췄나?
@@ -156,22 +166,35 @@ public class MainActivity extends BaseActivity {
             }
             if (hasBonusNum) {
                 winMoneyAmount += 75000000;
+                secondRankCount++;
             } else {
                 winMoneyAmount += 1500000;
+                thirdRankCount++;
             }
 
         } else if (correctCount == 4) {
             // 4등
             winMoneyAmount += 50000;
+            fourthRankCount++;
         } else if (correctCount == 3) {
             // 5등
             useMoneyAmount -= 5000;
+            fifthRankCount++;
         } else {
             // 꽝 -> 아무일도...
+            nonRankCount++;
         }
 
 //        당첨금액 텍스트에도 반영
         binding.winMoneyTxt.setText(String.format("당첨금액 : %,d원", winMoneyAmount));
+
+//        당첨횟수들도 텍스트뷰에 반영
+        binding.firstRankCountTxt.setText(String.format("1등 : %,d회", firstRankCount));
+        binding.secondtRankCountTxt.setText(String.format("2등 : %,d회", secondRankCount));
+        binding.thirdRankCountTxt.setText(String.format("3등 : %,d회", thirdRankCount));
+        binding.fourthRankCountTxt.setText(String.format("4등 : %,d회", fourthRankCount));
+        binding.fifthRankCountTxt.setText(String.format("5등 : %,d회", fifthRankCount));
+        binding.nonRankCountTxt.setText(String.format("꽝 : %,d회", nonRankCount));
     }
 
 }
